@@ -1,0 +1,5 @@
+Tokio
+Kioto
+Osaka
+Jokohama
+Nagoja

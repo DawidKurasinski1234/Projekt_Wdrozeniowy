@@ -1,0 +1,893 @@
+fileFormatVersion: 2
+guid: 44dcc47411409fe4e8ed10e9fca6a847
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1481004095393027412
+    second: red_buttons_transparent_0
+  - first:
+      213: 4715980897819839917
+    second: red_buttons_transparent_1
+  - first:
+      213: 9123955312686789855
+    second: red_buttons_transparent_2
+  - first:
+      213: -5580133164260668770
+    second: red_buttons_transparent_3
+  - first:
+      213: -1327205089717950597
+    second: red_buttons_transparent_4
+  - first:
+      213: -1116659678876790233
+    second: red_buttons_transparent_5
+  - first:
+      213: -6998480478191555352
+    second: red_buttons_transparent_6
+  - first:
+      213: 4016973570486890138
+    second: red_buttons_transparent_7
+  - first:
+      213: 3082765221414546080
+    second: red_buttons_transparent_8
+  - first:
+      213: -2315347043616377811
+    second: red_buttons_transparent_9
+  - first:
+      213: -5763965817447189327
+    second: red_buttons_transparent_10
+  - first:
+      213: -7457621403331998858
+    second: red_buttons_transparent_11
+  - first:
+      213: -7623792806147242435
+    second: red_buttons_transparent_12
+  - first:
+      213: 6120548824865665860
+    second: red_buttons_transparent_13
+  - first:
+      213: -8406920261067913513
+    second: red_buttons_transparent_14
+  - first:
+      213: -6939529517294640495
+    second: red_buttons_transparent_15
+  - first:
+      213: 3071474634584232717
+    second: red_buttons_transparent_16
+  - first:
+      213: 83727373825305530
+    second: red_buttons_transparent_17
+  - first:
+      213: 6875179161394926441
+    second: red_buttons_transparent_18
+  - first:
+      213: -2346183311055728448
+    second: red_buttons_transparent_19
+  - first:
+      213: -4928977222479651791
+    second: red_buttons_transparent_20
+  - first:
+      213: -5516009916147594679
+    second: red_buttons_transparent_21
+  - first:
+      213: -3176232223895751734
+    second: red_buttons_transparent_22
+  - first:
+      213: 2960176265572124624
+    second: red_buttons_transparent_23
+  - first:
+      213: -5843758101284431785
+    second: red_buttons_transparent_24
+  - first:
+      213: -198511623996876957
+    second: red_buttons_transparent_25
+  - first:
+      213: -266333109261445204
+    second: red_buttons_transparent_26
+  - first:
+      213: 1224164930463308195
+    second: red_buttons_transparent_27
+  - first:
+      213: 8930900118087681525
+    second: red_buttons_transparent_28
+  - first:
+      213: -6247514272732876495
+    second: red_buttons_transparent_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: red_buttons_transparent_0
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1509
+        width: 235
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455dcc8c0659d8410800000000000000
+      internalID: 1481004095393027412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_1
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1509
+        width: 233
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad4416e3a7827140800000000000000
+      internalID: 4715980897819839917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_2
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1509
+        width: 233
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd4fb3f140dce9e70800000000000000
+      internalID: 9123955312686789855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_3
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 1509
+        width: 234
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9acdd0b3726f82b0800000000000000
+      internalID: -5580133164260668770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_4
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 1509
+        width: 234
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b776543b002d49de0800000000000000
+      internalID: -1327205089717950597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_5
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1251
+        width: 234
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7221c8930f3d080f0800000000000000
+      internalID: -1116659678876790233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_6
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 1251
+        width: 237
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ece2e9a51760ee90800000000000000
+      internalID: -6998480478191555352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_7
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1251
+        width: 237
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ee005fd282fb730800000000000000
+      internalID: 4016973570486890138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_8
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 1251
+        width: 237
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aaa75cb2ae28ca20800000000000000
+      internalID: 3082765221414546080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_9
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 1251
+        width: 234
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24be7d812c3edfd0800000000000000
+      internalID: -2315347043616377811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 975
+        width: 235
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4f099b0a74200b0800000000000000
+      internalID: -5763965817447189327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_11
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 975
+        width: 237
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bcb0988d4318890800000000000000
+      internalID: -7457621403331998858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 975
+        width: 237
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d364a6cd5d8d23690800000000000000
+      internalID: -7623792806147242435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_13
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 975
+        width: 235
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4437d886abe80f450800000000000000
+      internalID: 6120548824865665860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_14
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 975
+        width: 234
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d64308709e945b80800000000000000
+      internalID: -8406920261067913513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_15
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 712
+        width: 234
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192a055dba6d1bf90800000000000000
+      internalID: -6939529517294640495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_16
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 712
+        width: 236
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03140328e110aa20800000000000000
+      internalID: 3071474634584232717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_17
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 712
+        width: 239
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb65d65a95792100800000000000000
+      internalID: 83727373825305530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_18
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 712
+        width: 236
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963dc12650b896f50800000000000000
+      internalID: 6875179161394926441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_19
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 712
+        width: 234
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c0d29e85bea07fd0800000000000000
+      internalID: -2346183311055728448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_20
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 452
+        width: 234
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13cdb1cb451c89bb0800000000000000
+      internalID: -4928977222479651791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_21
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 452
+        width: 233
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a8d72d4323373b0800000000000000
+      internalID: -5516009916147594679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_22
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 452
+        width: 237
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac37b8aee91cbe3d0800000000000000
+      internalID: -3176232223895751734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_23
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 452
+        width: 234
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d708fd31a8a41920800000000000000
+      internalID: 2960176265572124624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_24
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 452
+        width: 235
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75851abe7fcc6eea0800000000000000
+      internalID: -5843758101284431785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_25
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 177
+        width: 234
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36751efcabebe3df0800000000000000
+      internalID: -198511623996876957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_26
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 176
+        width: 233
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7db8eb27bcd4cf0800000000000000
+      internalID: -266333109261445204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_27
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 176
+        width: 238
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a991c2b48b1df010800000000000000
+      internalID: 1224164930463308195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_28
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 179
+        width: 237
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f54c17e65ee0fb70800000000000000
+      internalID: 8930900118087681525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_buttons_transparent_29
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 179
+        width: 237
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131f294aede5c49a0800000000000000
+      internalID: -6247514272732876495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,45 @@
+
+   [
+    {
+      "nazwa": "Japonia",
+      "stolica": "Tokio",
+      "powitanie": "Konnichiwa",
+      "symbol": "maneki-neko",
+      "symbolPlik": "japonia_symbol.png",
+      "obrazekPuzzle": "gora_fudzi.png"
+    },
+    {
+      "nazwa": "Brazylia",
+      "stolica": "Brasília",
+      "powitanie": "Olá",
+      "symbol": "piłka nożna",
+      "symbolPlik": "brazylia_symbol.png",
+      "obrazekPuzzle": "chrystus_rio.png"
+    },
+    {
+      "nazwa": "Egipt",
+      "stolica": "Kair",
+      "powitanie": "Ahlan",
+      "symbol": "hieroglify",
+      "symbolPlik": "egipt_symbol.png",
+      "obrazekPuzzle": "piramida_giza.png"
+    },
+    {
+      "nazwa": "Hiszpania",
+      "stolica": "Madryt",
+      "powitanie": "¡Hola!",
+      "symbol": "tancerz flamenco",
+      "symbolPlik": "hiszpania_symbol.png",
+      "obrazekPuzzle": "sagrada_familia.png"
+    },
+    {
+      "nazwa": "Włochy",
+      "stolica": "Rzym",
+      "powitanie": "Ciao",
+      "symbol": "pizza",
+      "symbolPlik": "wlochy_symbol.png",
+      "obrazekPuzzle": "koloseum.png"
+    }
+  ]
+
+

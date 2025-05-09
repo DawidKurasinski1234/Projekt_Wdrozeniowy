@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+<<<<<<< HEAD
+    path: Assets/Scenes/Main Menu.unity
+    guid: 774926fedc801554fbfb40efbede16b0
+  - enabled: 1
+    path: Assets/Scenes/Country_Scene.unity
+    guid: 388bee207b6dd0f4a8ee454ff6bc6f0f
+  - enabled: 1
+    path: Assets/Scenes/passport_menu.unity
+    guid: e904a09743a052d4cbb642fccceb8bc9
+=======
+    path: Assets/Dawid/Scenes/Main Menu.unity
+    guid: 774926fedc801554fbfb40efbede16b0
+  - enabled: 1
+    path: Assets/Dawid/Scenes/Country_Scene.unity
+    guid: 388bee207b6dd0f4a8ee454ff6bc6f0f
+>>>>>>> d3691c1f3d85c09dd01d2ed50a058e076e559370
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_UseUCBPForAssetBundles: 0
