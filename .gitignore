@@ -9,7 +9,7 @@ MemoryCaptures/
 
 # User-specific files
 UserSettings/
-.vscode/
+*.vscode/
 *.csproj
 *.sln
 *.suo
