@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 470427955}
   - component: {fileID: 470427954}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Visited Countries
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -587,8 +587,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Odwiedzone kraje :'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 097da09ad0201b14286f30b5c3dbec2d, type: 2}
+  m_sharedMaterial: {fileID: 5932793492427501080, guid: 097da09ad0201b14286f30b5c3dbec2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 1480559856}
   - component: {fileID: 1480559855}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Return
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -856,8 +856,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Powr\xF3t do menu"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 097da09ad0201b14286f30b5c3dbec2d, type: 2}
+  m_sharedMaterial: {fileID: 5932793492427501080, guid: 097da09ad0201b14286f30b5c3dbec2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 1602348171}
   - component: {fileID: 1602348170}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Passport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1067,8 +1067,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PASZPORT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 097da09ad0201b14286f30b5c3dbec2d, type: 2}
+  m_sharedMaterial: {fileID: 5932793492427501080, guid: 097da09ad0201b14286f30b5c3dbec2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1156,7 +1156,7 @@ GameObject:
   - component: {fileID: 1824342293}
   - component: {fileID: 1824342292}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Score (string)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1203,8 +1203,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Liczba punkt\xF3w :"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 097da09ad0201b14286f30b5c3dbec2d, type: 2}
+  m_sharedMaterial: {fileID: 5932793492427501080, guid: 097da09ad0201b14286f30b5c3dbec2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1292,7 +1292,7 @@ GameObject:
   - component: {fileID: 2071812081}
   - component: {fileID: 2071812080}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Score (int)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1339,8 +1339,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[l.pkt]'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 097da09ad0201b14286f30b5c3dbec2d, type: 2}
+  m_sharedMaterial: {fileID: 5932793492427501080, guid: 097da09ad0201b14286f30b5c3dbec2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

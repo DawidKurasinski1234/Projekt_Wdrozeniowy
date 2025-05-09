@@ -6,7 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-<<<<<<< HEAD
     path: Assets/Scenes/Main Menu.unity
     guid: 774926fedc801554fbfb40efbede16b0
   - enabled: 1
@@ -15,13 +14,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/passport_menu.unity
     guid: e904a09743a052d4cbb642fccceb8bc9
-=======
-    path: Assets/Dawid/Scenes/Main Menu.unity
-    guid: 774926fedc801554fbfb40efbede16b0
   - enabled: 1
-    path: Assets/Dawid/Scenes/Country_Scene.unity
-    guid: 388bee207b6dd0f4a8ee454ff6bc6f0f
->>>>>>> d3691c1f3d85c09dd01d2ed50a058e076e559370
-  m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    path: Assets/Scenes/minigame1_menu.unity
+    guid: 42142911a49b3ab40ad182a0873913cd
+  - enabled: 1
+    path: Assets/Scenes/minigame2_menu.unity
+    guid: 6f9fea21e3fd1a9458a1a7ba96ae1c40
+  - enabled: 1
+    path: Assets/Scenes/minigame3_menu.unity
+    guid: 9d2f3703a86b8a04eb9dbfde69d38f47
+  - enabled: 1
+    path: Assets/Scenes/minigame4_menu.unity
+    guid: 59aa1f986c0e68e4991af09c519fd0ae
+  - enabled: 1
+    path: Assets/Scenes/minigame5_menu.unity
+    guid: 766e3aa54642bcf4cb6ea171633c30b1
+  m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
