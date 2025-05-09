@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|c:\\projekt wdro\u017Ceniowy\\iasete game - projekt wdro\u017Ceniowy\\assets\\scripts\\homereturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\homereturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\projekt wdro\u017Ceniowy\\iasete game - projekt wdro\u017Ceniowy\\assets\\minigame1start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\minigame1start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|c:\\projekt wdro\u017Ceniowy\\iasete game - projekt wdro\u017Ceniowy\\assets\\scripts\\exitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\exitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\Pause Menu\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\UI\\Pause Menu\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\assets\\scripts\\homereturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\homereturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\Pause Menu\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\UI\\Pause Menu\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\assets\\scripts\\exitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\exitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\ExitGame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,14 +47,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeReturn.cs",
-              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\HomeReturn.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\HomeReturn.cs",
-              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\HomeReturn.cs",
-              "RelativeToolTip": "Assets\\Scripts\\HomeReturn.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABBAAAAAAAAAA==",
+              "Title": "Minigame1Start.cs",
+              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Minigame1Start.cs",
+              "RelativeDocumentMoniker": "Assets\\Minigame1Start.cs",
+              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Minigame1Start.cs",
+              "RelativeToolTip": "Assets\\Minigame1Start.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T08:33:32.791Z",
+              "WhenOpened": "2025-05-09T11:15:37.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs",
+              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T07:52:54.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PauseMenu.cs",
+              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\Pause Menu\\PauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\UI\\Pause Menu\\PauseMenu.cs",
+              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\Pause Menu\\PauseMenu.cs",
+              "RelativeToolTip": "Assets\\UI\\Pause Menu\\PauseMenu.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T21:08:55.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ExitGame.cs",
+              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\ExitGame.cs",
+              "RelativeDocumentMoniker": "Assets\\UI\\ExitGame.cs",
+              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\ExitGame.cs",
+              "RelativeToolTip": "Assets\\UI\\ExitGame.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T13:46:01.934Z",
               "EditorCaption": ""
             },
             {
@@ -56,6 +100,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PauseMenu.cs",
+              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\PauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PauseMenu.cs",
+              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\PauseMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PauseMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T10:35:58.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeReturn.cs",
+              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\HomeReturn.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\HomeReturn.cs",
+              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\HomeReturn.cs",
+              "RelativeToolTip": "Assets\\Scripts\\HomeReturn.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T08:33:32.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ExitGame.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\ExitGame.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ExitGame.cs",
@@ -63,12 +131,11 @@
               "RelativeToolTip": "Assets\\Scripts\\ExitGame.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T08:23:28.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T08:23:28.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
@@ -77,39 +144,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T08:18:39.077Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs",
-              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs",
-              "RelativeToolTip": "Assets\\Dawid\\UI\\Main Menu\\MainMenu.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T07:52:54.023Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PauseMenu.cs",
-              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\Pause Menu\\PauseMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\UI\\Pause Menu\\PauseMenu.cs",
-              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\Pause Menu\\PauseMenu.cs",
-              "RelativeToolTip": "Assets\\UI\\Pause Menu\\PauseMenu.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T21:08:55.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ExitGame.cs",
-              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\ExitGame.cs",
-              "RelativeDocumentMoniker": "Assets\\UI\\ExitGame.cs",
-              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\UI\\ExitGame.cs",
-              "RelativeToolTip": "Assets\\UI\\ExitGame.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T13:46:01.934Z"
             }
           ]
         }
