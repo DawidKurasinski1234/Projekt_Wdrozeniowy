@@ -885,7 +885,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      red_buttons_transparent_0: 1481004095393027412
+      red_buttons_transparent_1: 4715980897819839917
+      red_buttons_transparent_10: -5763965817447189327
+      red_buttons_transparent_11: -7457621403331998858
+      red_buttons_transparent_12: -7623792806147242435
+      red_buttons_transparent_13: 6120548824865665860
+      red_buttons_transparent_14: -8406920261067913513
+      red_buttons_transparent_15: -6939529517294640495
+      red_buttons_transparent_16: 3071474634584232717
+      red_buttons_transparent_17: 83727373825305530
+      red_buttons_transparent_18: 6875179161394926441
+      red_buttons_transparent_19: -2346183311055728448
+      red_buttons_transparent_2: 9123955312686789855
+      red_buttons_transparent_20: -4928977222479651791
+      red_buttons_transparent_21: -5516009916147594679
+      red_buttons_transparent_22: -3176232223895751734
+      red_buttons_transparent_23: 2960176265572124624
+      red_buttons_transparent_24: -5843758101284431785
+      red_buttons_transparent_25: -198511623996876957
+      red_buttons_transparent_26: -266333109261445204
+      red_buttons_transparent_27: 1224164930463308195
+      red_buttons_transparent_28: 8930900118087681525
+      red_buttons_transparent_29: -6247514272732876495
+      red_buttons_transparent_3: -5580133164260668770
+      red_buttons_transparent_4: -1327205089717950597
+      red_buttons_transparent_5: -1116659678876790233
+      red_buttons_transparent_6: -6998480478191555352
+      red_buttons_transparent_7: 4016973570486890138
+      red_buttons_transparent_8: 3082765221414546080
+      red_buttons_transparent_9: -2315347043616377811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

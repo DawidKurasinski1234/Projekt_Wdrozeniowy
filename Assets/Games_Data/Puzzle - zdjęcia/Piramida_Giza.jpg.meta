@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Piramida_Giza_0: 1877854294292174667
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
