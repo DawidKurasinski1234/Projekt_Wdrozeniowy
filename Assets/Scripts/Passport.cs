@@ -13,7 +13,9 @@ public class Passport {
     
     private static Entry[] m_entries;
     private static int     m_visited;
-    
+
+    public static CountryInfo CurrentSelectedCountry { get; internal set; }
+
     private static int
     GetEntryIndex(string countryName)
     {

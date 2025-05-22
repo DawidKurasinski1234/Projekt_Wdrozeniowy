@@ -1,6 +1,8 @@
-using UnityEngine;
+// Nazwa pliku: CountryInfo.cs (jeœli tworzysz osobny plik)
 
-[System.Serializable]
+using System; // Potrzebne dla atrybutu Serializable
+
+[Serializable] // To jest wa¿ne, aby JsonHelper móg³ j¹ deserializowaæ
 public class CountryInfo
 {
     public string nazwa;
@@ -8,5 +10,5 @@ public class CountryInfo
     public string powitanie;
     public string symbol;
     public string symbolPlik;
-    public string obrazekPuzzle;
+    public string obrazekPuzzle; // To pole jest kluczowe dla puzzli
 }
