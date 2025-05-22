@@ -5,11 +5,14 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        Passport.Init();
+        Passport.CurrentCountry = Passport.ChooseCountry();
         SceneManager.LoadSceneAsync(1); //wczytywanie sceny losowania kraju
     }
 
     public void OpenPassportMenu()
     {
+        Passport.Init();
         SceneManager.LoadSceneAsync("passport_menu");//wczytywnie sceny paszportu
     }
 
