@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     {
         Passport.Init();
         Passport.CurrentCountry = Passport.ChooseCountry();
-        SceneManager.LoadSceneAsync(1); //wczytywanie sceny losowania kraju
+        SceneManager.LoadSceneAsync(2); //wczytywanie sceny losowania kraju
     }
 
     public void OpenPassportMenu()
@@ -16,8 +16,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadSceneAsync("passport_menu");//wczytywnie sceny paszportu
     }
 
-    public void OpenMinigame1()
+public void OpenMinigame1()
     {
-        SceneManager.LoadSceneAsync(2); // wczytywanie sceny minigry 1
+        SceneManager.LoadSceneAsync(3); // wczytywanie sceny minigry 1
     }
 }

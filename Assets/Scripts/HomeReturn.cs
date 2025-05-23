@@ -5,6 +5,6 @@ public class HomeReturn : MonoBehaviour
 {
     public void ReturnHome()
     {
-        SceneManager.LoadSceneAsync(0); //powrót do menu g³ównego
+        SceneManager.LoadSceneAsync(1); //powrót do menu g³ównego
     }
 }

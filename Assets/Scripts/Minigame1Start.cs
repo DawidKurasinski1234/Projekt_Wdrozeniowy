@@ -4,7 +4,7 @@ public class Minigame1Start : MonoBehaviour
 {
         public void RunMinigame1()
     {
-        SceneManager.LoadSceneAsync(3); //wczytanie minigry 1
+        SceneManager.LoadSceneAsync(4); //wczytanie minigry 1
     }
         
   }
