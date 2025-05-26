@@ -64,7 +64,7 @@ public class PuzzleManager : MonoBehaviour
         // i chcesz go ukryæ przed generowaniem kawa³ków:
         if (fullPuzzleImageDisplay != null)
         {
-            fullPuzzleImageDisplay.gameObject.SetActive(false); // Ukryj pe³ny obrazek przed generowaniem kawa³ków
+            fullPuzzleImageDisplay.gameObject.SetActive(true); // Ukryj pe³ny obrazek przed generowaniem kawa³ków
         }
 
         // 3. Rozpocznij grê w puzzle z za³adowan¹ tekstur¹
