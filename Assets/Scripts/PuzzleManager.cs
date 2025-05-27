@@ -1,150 +1,227 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // Potrzebne dla Image, Button (chocia¿ Image tylko do wyœwietlenia ca³oœci)
+using UnityEngine.UI; // Potrzebne dla Image
 using System.IO; // Potrzebne dla Path.GetFileNameWithoutExtension
+using TMPro; // Dodane, jeœli u¿ywasz TextMeshPro dla puzzleText
 
 public class PuzzleManager : MonoBehaviour
 {
     [Header("Game Elements")]
     [Range(2, 6)]
-    [SerializeField] private int difficulty = 4; // Liczba kawa³ków w krótszym wymiarze
+    [SerializeField] private int difficulty = 4; // Okreœla liczbê kawa³ków w krótszym wymiarze
     [SerializeField] private Transform gameHolder; // Rodzic dla wszystkich kawa³ków puzzli
-    [SerializeField] private GameObject piecePrefab; // Zmienione na GameObject, bo Instantiate potrzebuje GameObject
+    [SerializeField] private GameObject piecePrefab; // Prefab pojedynczego kawa³ka puzzli (powinien mieæ Quad, MeshFilter, MeshRenderer)
 
-    // Usuniêto [Header("UI Elements")] - niepotrzebne, bo obrazek jest wylosowany
-    // Usuniêto [SerializeField] private List<Texture2D> imageTextures;
-    // Usuniêto [SerializeField] private Transform levelSelectPanel;
-    // Usuniêto [SerializeField] private Image levelSelectPrefab;
+    [Tooltip("Mno¿nik skali dla ka¿dego kawa³ka puzzli. U¿yj, aby dostosowaæ widoczny rozmiar.")]
+    [SerializeField] private float pieceScaleMultiplier = 100f; // Domyœlna wartoœæ, mo¿esz dostosowaæ w Inspektorze
+
+    [Header("UI Elements")]
+    [SerializeField] private Image fullPuzzleImageDisplay; // Obrazek UI wyœwietlaj¹cy ca³y obrazek przed pociêciem
+    [SerializeField] private TextMeshProUGUI puzzleText; // Tekst "U³ó¿ puzzle" lub podobny (zak³adam TextMeshPro)
+    [SerializeField] private GameObject levelSelectPanel; // Panel, który chcesz ukryæ po starcie gry (np. panel z wyborem poziomu/krajów)
 
     private List<Transform> pieces;
-    private Vector2Int dimensions;
-    private float width;
-    private float height;
-
-    // Referencja do obiektu Image, który wyœwietla³ ca³y obrazek przed pociêciem
-    // U¿yjemy go do pobrania Texture2D lub po prostu za³adujemy Texture2D bezpoœrednio
-    public Image fullPuzzleImageDisplay;
+    private Vector2Int dimensions; // Wymiary siatki puzzli (np. 4x4, 5x5)
+    private float pieceWidthWorld; // Szerokoœæ pojedynczego kawa³ka w jednostkach Unity
+    private float pieceHeightWorld; // Wysokoœæ pojedynczego kawa³ka w jednostkach Unity
 
     void Start()
     {
-        // 1. Upewnij siê, ¿e Passport jest zainicjowany i kraj jest wybrany
-        // To powinno byæ ju¿ zrobione przez GameInitializer na LoaderScene
+        // SprawdŸ, czy GameHolder i PiecePrefab s¹ przypisane. Jeœli nie, zg³oœ b³¹d i przerwij.
+        if (gameHolder == null)
+        {
+            Debug.LogError("PuzzleManager: Game Holder nie jest przypisany w Inspektorze! Przypisz obiekt nadrzêdny dla kawa³ków puzzli.");
+            return;
+        }
+        if (piecePrefab == null)
+        {
+            // Ten b³¹d by³ widoczny na screenie
+            Debug.LogError("PuzzleManager: Piece Prefab nie jest przypisany w Inspektorze! Przypisz prefab pojedynczego kawa³ka puzzli.");
+            return;
+        }
+
+        // Upewnij siê, ¿e Passport jest zainicjowany.
         Passport.Init();
 
-        if (Passport.CurrentCountry == null)
+        // Rozpoczynamy proces ³adowania i startu puzzli
+        LoadAndStartPuzzle();
+    }
+
+    private void LoadAndStartPuzzle()
+    {
+        Texture2D jigsawTexture = null;
+        CountryInfo currentCountryInfo = null; // Zmienna do przechowywania obiektu CountryInfo
+
+        // SprawdŸ, czy Passport.CurrentCountry (string) jest ustawiony
+        if (string.IsNullOrEmpty(Passport.CurrentCountry))
         {
-            Debug.LogError("PuzzleManager: Brak wylosowanego kraju w Passport. Nie mo¿na rozpocz¹æ gry w puzzle.");
-            // Opcjonalnie: wyœwietl komunikat b³êdu dla u¿ytkownika
+            Debug.LogError("PuzzleManager: Brak wylosowanej nazwy kraju w Passport.CurrentCountry (string). Nie mo¿na rozpocz¹æ gry w puzzle.");
             return;
         }
 
-        CountryInfo currentCountry = Passport.GetCountry(Passport.CurrentCountry);
-        if (currentCountry == null)
+        // Pobierz obiekt CountryInfo na podstawie nazwy kraju
+        currentCountryInfo = Passport.GetCountry(Passport.CurrentCountry);
+
+        if (currentCountryInfo == null)
         {
-            Debug.LogError($"PuzzleManager: Nie znaleziono danych dla kraju '{Passport.CurrentCountry}'. SprawdŸ plik JSON.");
+            Debug.LogError($"PuzzleManager: Nie znaleziono danych dla kraju o nazwie '{Passport.CurrentCountry}'. SprawdŸ plik JSON i implementacjê GetCountry.");
             return;
         }
 
-        // 2. Za³aduj Texture2D dla wylosowanego obrazka puzzli
-        // U¿ywamy nazwy pliku z CountryInfo.obrazekPuzzle
-        string imagePathWithoutExtension = Path.GetFileNameWithoutExtension(currentCountry.obrazekPuzzle);
+        // --- WA¯NA ZMIANA TUTAJ ---
+        // Pamiêtaj, aby ZAST¥PIÆ 'TwojaNazwaPolaKraju' na rzeczywist¹ nazwê pola
+        // w Twojej klasie CountryInfo, które przechowuje nazwê kraju (np. 'name', 'countryName', 'country').
+        string countryNameForLog = "BrakNazwyKraju";
+        // if (!string.IsNullOrEmpty(currentCountryInfo.TwojaNazwaPolaKraju)) // Odkomentuj i wstaw poprawn¹ nazwê pola
+        // {
+        //     countryNameForLog = currentCountryInfo.TwojaNazwaPolaKraju; // Odkomentuj i wstaw poprawn¹ nazwê pola
+        // }
+        // Przyk³adowo, jeœli masz 'public string name;' w CountryInfo:
+        if (currentCountryInfo.nazwa != null) // ZMIEN TO NA TWOJ¥ W£AŒCIW¥ NAZWÊ POLA W CountryInfo
+        {
+            countryNameForLog = currentCountryInfo.nazwa; // ZMIEN TO NA TWOJ¥ W£AŒCIW¥ NAZWÊ POLA W CountryInfo
+        }
+
+
+        if (string.IsNullOrEmpty(currentCountryInfo.obrazekPuzzle)) // Sprawdzamy pole z obrazkiem puzzli
+        {
+            Debug.LogError($"PuzzleManager: W danych kraju '{countryNameForLog}' brakuje nazwy pliku obrazka puzzli ('obrazekPuzzle').");
+            return;
+        }
+
+        // U¿ywamy nazwy pliku z currentCountryInfo.obrazekPuzzle
+        string imagePathWithoutExtension = Path.GetFileNameWithoutExtension(currentCountryInfo.obrazekPuzzle);
         string fullPathInResources = "Puzzle - zdjêcia/" + imagePathWithoutExtension;
 
-        Texture2D jigsawTexture = Resources.Load<Texture2D>(fullPathInResources);
+        jigsawTexture = Resources.Load<Texture2D>(fullPathInResources);
 
         if (jigsawTexture == null)
         {
-            Debug.LogError($"PuzzleManager: NIE ZNALEZIONO obrazka puzzli: '{fullPathInResources}'. Upewnij siê, ¿e plik jest w Assets/Resources/Puzzle - zdjêcia/ i ma poprawne ustawienia (Read/Write Enabled).");
-            return;
+            Debug.LogError($"PuzzleManager: NIE ZNALEZIONO obrazka puzzli: '{fullPathInResources}'. " +
+                           $"Upewnij siê, ¿e plik jest w 'Assets/Resources/Puzzle - zdjêcia/' " +
+                           $"i ma poprawne ustawienia ('Texture Type: Sprite (2D and UI)', 'Read/Write Enabled' zaznaczone w zaawansowanych).");
         }
-
-        Debug.Log($"PuzzleManager: Pomyœlnie za³adowano teksturê puzzli: {jigsawTexture.name}");
-
-        // Opcjonalnie: Jeœli masz komponent Image na scenie, który wyœwietla³ ca³oœæ obrazka
-        // i chcesz go ukryæ przed generowaniem kawa³ków:
-        if (fullPuzzleImageDisplay != null)
+        else
         {
-            fullPuzzleImageDisplay.gameObject.SetActive(true); // Ukryj pe³ny obrazek przed generowaniem kawa³ków
+            Debug.Log($"PuzzleManager: Pomyœlnie za³adowano teksturê puzzli: {jigsawTexture.name}");
+            StartGame(jigsawTexture); // Rozpocznij grê z za³adowan¹ tekstur¹
         }
-
-        // 3. Rozpocznij grê w puzzle z za³adowan¹ tekstur¹
-        StartGame(jigsawTexture);
     }
 
-    // Publiczna metoda StartGame, która teraz przyjmuje Texture2D
     public void StartGame(Texture2D jigsawTexture)
     {
-        // Zmieniliœmy to, ¿eby nie ukrywaæ panelu wyboru poziomu, bo go nie ma.
-        // Jeœli masz jakiœ inny panel UI, który chcesz ukryæ, mo¿esz go tutaj wy³¹czyæ.
-        // np. if (levelSelectPanel != null) levelSelectPanel.gameObject.SetActive(false); 
+        // Ukryj UI, które nie jest ju¿ potrzebne
+        if (fullPuzzleImageDisplay != null)
+        {
+            fullPuzzleImageDisplay.gameObject.SetActive(false); // Ukryj ca³y obrazek (UI Image)
+            Debug.Log("PuzzleManager: Ukryto fullPuzzleImageDisplay.");
+        }
+        if (levelSelectPanel != null)
+        {
+            levelSelectPanel.gameObject.SetActive(false); // Ukryj panel wyboru poziomu (jeœli istnieje)
+            Debug.Log("PuzzleManager: Ukryto levelSelectPanel.");
+        }
+        if (puzzleText != null)
+        {
+            puzzleText.gameObject.SetActive(false); // Ukryj tekst "U³ó¿ puzzle" (jeœli istnieje)
+            Debug.Log("PuzzleManager: Ukryto puzzleText.");
+        }
 
         pieces = new List<Transform>();
 
-        dimensions = GetDimensions(jigsawTexture, difficulty);
+        // U¿ywamy sta³ych wymiarów siatki puzzli.
+        dimensions = new Vector2Int(difficulty, difficulty); // Np. 4x4, 5x5 itp.
+
+        Debug.Log($"[PuzzleManager] Wymiary siatki puzzli (dimensions): {dimensions.x}x{dimensions.y}");
+
+        // Oblicz rozmiar pojedynczego kawa³ka w jednostkach Unity.
+        // Ka¿dy kawa³ek bêdzie mia³ 1x1 jednostkê Unity, a nastêpnie zostanie przeskalowany przez pieceScaleMultiplier.
+        pieceWidthWorld = 1f;
+        pieceHeightWorld = 1f;
 
         CreateJigsawPieces(jigsawTexture);
 
         // Dodaj tutaj logikê rozrzucania/mieszania kawa³ków puzzli, jeœli jeszcze jej nie masz
-        // ShufflePieces(); // Przyk³ad
-    }
-
-    Vector2Int GetDimensions(Texture2D jigsawTexture, int difficulty)
-    {
-        Vector2Int dimensions = Vector2Int.zero;
-        if (jigsawTexture.width < jigsawTexture.height)
-        {
-            dimensions.x = difficulty;
-            dimensions.y = (difficulty * jigsawTexture.height) / jigsawTexture.width;
-        }
-        else
-        {
-            dimensions.x = (difficulty * jigsawTexture.width) / jigsawTexture.height;
-            dimensions.y = difficulty;
-        }
-        return dimensions;
+        // ShufflePieces(); 
     }
 
     void CreateJigsawPieces(Texture2D jigsawTexture)
     {
-        height = 1f / dimensions.y;
-        float aspect = (float)jigsawTexture.width / jigsawTexture.height;
-        width = aspect / dimensions.x;
-
         for (int row = 0; row < dimensions.y; row++)
         {
             for (int col = 0; col < dimensions.x; col++)
             {
-                // Zmieniono piecePrefab na GameObject, wiêc Instantiate musi byæ na GameObject
-                Transform piece = Instantiate(piecePrefab, gameHolder).transform; // <- U¿yj .transform
+                // Instantiate zwraca GameObject, potrzebujemy jego Transform
+                // Upewnij siê, ¿e piecePrefab jest przypisany w Inspektorze!
+                Transform piece = Instantiate(piecePrefab, gameHolder).transform;
+
+                // Obliczanie pozycji kawa³ka tak, aby ca³oœæ by³a wyœrodkowana wokó³ (0,0)
+                // Offset (przesuniêcie) dla wyœrodkowania ca³ego obrazka
+                // dimensions.x i dimensions.y to liczba kawa³ków.
+                float offsetX = -(dimensions.x / 2f - 0.5f) * pieceWidthWorld;
+                float offsetY = -(dimensions.y / 2f - 0.5f) * pieceHeightWorld;
 
                 piece.localPosition = new Vector3(
-                    (-width * dimensions.x / 2) + (width * col) + (width / 2),
-                    (-height * dimensions.y / 2) + (height * row) + (height / 2),
-                    -1);
-                piece.localScale = new Vector3(width, height, 1f);
+                    (col * pieceWidthWorld) + offsetX,      // Pozycja X
+                    (row * pieceHeightWorld) + offsetY,     // Pozycja Y
+                    -1f); // Pozycja Z (bli¿ej kamery ni¿ 0,0,0)
 
-                piece.name = $"Piece {(row * dimensions.x) + col}";
+                // Skalowanie kawa³ka - u¿ywamy pieceWidthWorld i pieceHeightWorld
+                // plus globalny mno¿nik skali, aby dostosowaæ widoczny rozmiar
+                piece.localScale = new Vector3(
+                    pieceWidthWorld * pieceScaleMultiplier,
+                    pieceHeightWorld * pieceScaleMultiplier,
+                    1f); // Skala Z powinna byæ 1 dla Quad'a
+
+                piece.name = $"Piece {col}x{row}";
                 pieces.Add(piece);
 
-                // Zapewnij, ¿e piecePrefab ma komponent MeshFilter i MeshRenderer
-                Mesh mesh = piece.GetComponent<MeshFilter>().mesh;
-                mesh.uv = new Vector2[4]; // Inicjalizuj UV array
+                Debug.Log($"[PuzzleManager] Utworzono {piece.name} - Pozycja lokalna: {piece.localPosition}, Skala lokalna: {piece.localScale}");
 
-                float width1 = 1f / dimensions.x;
-                float height1 = 1f / dimensions.y;
+                // --- UV Mapping ---
+                // Kluczowe: upewnij siê, ¿e Read/Write Enabled jest zaznaczone dla tekstury!
+                // Obliczanie wspó³rzêdnych UV dla tego fragmentu tekstury
+                float uvWidth = 1f / dimensions.x; // Szerokoœæ fragmentu UV (np. 1/4 = 0.25 dla 4 kolumn)
+                float uvHeight = 1f / dimensions.y; // Wysokoœæ fragmentu UV (np. 1/4 = 0.25 dla 4 rzêdów)
 
+                // Wspó³rzêdne UV dla czterech wierzcho³ków Quad'a
                 Vector2[] uv = new Vector2[4];
-                uv[0] = new Vector2(width1 * col, height1 * row);
-                uv[1] = new Vector2(width1 * (col + 1), height1 * row);
-                uv[2] = new Vector2(width1 * col, height1 * (row + 1));
-                uv[3] = new Vector2(width1 * (col + 1), height1 * (row + 1));
+                // UV dla dolnego-lewego wierzcho³ka (uv[0] wierzcho³ek 0)
+                uv[0] = new Vector2(uvWidth * col, uvHeight * row);
+                // UV dla dolnego-prawego wierzcho³ka (uv[1] wierzcho³ek 1)
+                uv[1] = new Vector2(uvWidth * (col + 1), uvHeight * row);
+                // UV dla górnego-lewego wierzcho³ka (uv[2] wierzcho³ek 2)
+                uv[2] = new Vector2(uvWidth * col, uvHeight * (row + 1));
+                // UV dla górnego-prawego wierzcho³ka (uv[3] wierzcho³ek 3)
+                uv[3] = new Vector2(uvWidth * (col + 1), uvHeight * (row + 1));
 
-                mesh.uv = uv;
+                // Przypisz nasze nowe UV do siatki.
+                Mesh mesh = piece.GetComponent<MeshFilter>().mesh;
+                // Upewnij siê, ¿e MeshFilter i jego mesh nie s¹ null
+                if (mesh != null)
+                {
+                    mesh.uv = uv;
+                }
+                else
+                {
+                    Debug.LogError($"[PuzzleManager] B³¹d: Brak MeshFilter lub jego mesh na Piece {piece.name}. SprawdŸ prefab!");
+                }
 
-                // Ustaw teksturê na materiale kawa³ka puzzli
-                // Wa¿ne: Jeœli piecePrefab ma wiêcej ni¿ jeden materia³, musisz wybraæ w³aœciwy indeks
-                // Lub jeœli materia³ jest wspó³dzielony, u¿yj .material, ¿eby utworzyæ instancjê
-                piece.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", jigsawTexture);
+                // Ustaw teksturê na materiale kawa³ka
+                // Upewnij siê, ¿e PiecePrefab u¿ywa materia³u z shaderem Unlit/Texture, a nie Sprites-Default!
+                // Wa¿ne: u¿ywamy .material, aby uzyskaæ instancjê materia³u dla tego konkretnego obiektu,
+                // co zapobiega modyfikowaniu wspólnego materia³u dla wszystkich prefabów.
+                MeshRenderer meshRenderer = piece.GetComponent<MeshRenderer>();
+                if (meshRenderer != null && meshRenderer.material != null)
+                {
+                    meshRenderer.material.SetTexture("_MainTex", jigsawTexture);
+                    Debug.Log($"[PuzzleManager] Przypisano teksturê do {piece.name}. Materia³: {meshRenderer.material.name}");
+                }
+                else
+                {
+                    Debug.LogError($"[PuzzleManager] B³¹d: Brak MeshRenderer lub Material na Piece {piece.name}. SprawdŸ prefab PiecePrefab!");
+                }
             }
         }
     }
