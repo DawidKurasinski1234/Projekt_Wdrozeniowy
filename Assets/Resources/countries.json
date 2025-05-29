@@ -3,6 +3,7 @@
     {
       "nazwa": "Japonia",
       "stolica": "Tokio",
+      "miasta": ["Kioto", "Osaka", "Jokohama", "Nagoja"],
       "powitanie": "Konnichiwa",
       "symbol": "maneki-neko",
       "symbolPlik": "manekineko-Japonia.jpg",
@@ -11,6 +12,7 @@
     {
       "nazwa": "Brazylia",
       "stolica": "Brasília",
+      "miasta": ["São Paulo", "Rio de Janeiro", "Salvador", "Fortaleza"],
       "powitanie": "Olá",
       "symbol": "piłka nożna",
       "symbolPlik": "piłka_nożna-Brazylia.jpg",
@@ -19,6 +21,7 @@
     {
       "nazwa": "Egipt",
       "stolica": "Kair",
+      "miasta": ["Aleksandria", "Giza", "Luksor", "Asuan"],
       "powitanie": "Ahlan",
       "symbol": "hieroglify",
       "symbolPlik": "Hieroglify-Egipt.jpg",
@@ -27,6 +30,7 @@
     {
       "nazwa": "Hiszpania",
       "stolica": "Madryt",
+      "miasta": ["Barcelona", "Valencia", "Sevilla", "Malaga"],
       "powitanie": "¡Hola!",
       "symbol": "tancerz flamenco",
       "symbolPlik": "flamenco-Hiszpania.jpg",
@@ -35,6 +39,7 @@
     {
       "nazwa": "Włochy",
       "stolica": "Rzym",
+      "miasta": ["Mediolan", "Neapol", "Turyn", "Florencja"],
       "powitanie": "Ciao",
       "symbol": "pizza",
       "symbolPlik": "Pizza-Wlochy.jpg",
