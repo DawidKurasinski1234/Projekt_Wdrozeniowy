@@ -29,7 +29,7 @@ public class SymbolKrajuGameManager : MonoBehaviour
     {
         Passport.Init(); // Inicjalizuj system Paszportu
 
-        if (Passport.m_entries == null || Passport.m_entries.Length == 0) // Zak³adaj¹c, ¿e m_entries jest publiczne lub mamy dostêp do jego d³ugoœci
+        if (!Passport.IsInitialized) // Zak³adaj¹c, ¿e m_entries jest publiczne lub mamy dostêp do jego d³ugoœci
         {
             Debug.LogError("Dane krajów w Paszporcie nie zosta³y za³adowane! SprawdŸ Passport.Init() i plik JSON 'countries'.");
             feedbackText.text = "B³¹d: Brak danych o krajach.";
@@ -118,7 +118,8 @@ public class SymbolKrajuGameManager : MonoBehaviour
         }
 
         Passport.CurrentCountry = currentCountryInfo.nazwa; // Ustaw bie¿¹cy kraj w Paszporcie
-        Passport.CurrentSelectedCountry = currentCountryInfo; // Ustaw bie¿¹cy obiekt CountryInfo w Paszporcie
+        // NOTE:surusek - i tak tego nie u¿ywasz, to po co to
+        // Passport.CurrentSelectedCountry = currentCountryInfo; // Ustaw bie¿¹cy obiekt CountryInfo w Paszporcie
 
         currentCountryName = currentCountryInfo.nazwa;
         // Zak³adamy, ¿e CountryInfo ma pole np. `symbolSpriteName` lub podobne, które jest nazw¹ pliku Sprite
@@ -127,11 +128,12 @@ public class SymbolKrajuGameManager : MonoBehaviour
         // Musisz upewniæ siê, ¿e `currentCountryInfo` ma pole, np. `symbolResourceName`
         // które odpowiada nazwie pliku sprite'a w folderze Resources/Games_Data/Kraje - Symbole/
         // np. jeœli dla W³och symbol to "Pizza-Wlochy.png", to pole powinno zawieraæ "Pizza-Wlochy"
-        correctSymbol = LoadSpriteByResourceName(currentCountryInfo.symbolSpriteName); // ZMIEÑ "symbolSpriteName" na faktyczne pole w CountryInfo
+        string resName = currentCountryInfo.SymbolResourceName();
+        correctSymbol = LoadSpriteByResourceName(resName); // ZMIEÑ "symbolSpriteName" na faktyczne pole w CountryInfo
 
         if (correctSymbol == null)
         {
-            Debug.LogError($"Nie uda³o siê za³adowaæ poprawnego symbolu dla kraju: {currentCountryName} (nazwa zasobu: {currentCountryInfo.symbolSpriteName}). SprawdŸ œcie¿kê i nazwê pliku w Resources oraz w danych JSON.");
+            Debug.LogError($"Nie uda³o siê za³adowaæ poprawnego symbolu dla kraju: {currentCountryName} (nazwa zasobu: {resName}). SprawdŸ œcie¿kê i nazwê pliku w Resources oraz w danych JSON.");
             LoadNextSymbolQuestion(); // Spróbuj za³adowaæ nastêpny
             return;
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
 
@@ -13,8 +14,6 @@ public class Passport {
     
     private static Entry[] m_entries;
     private static int     m_visited;
-
-    public static CountryInfo CurrentSelectedCountry { get; internal set; }
 
     private static int
     GetEntryIndex(string countryName)
@@ -72,6 +71,11 @@ public class Passport {
         return entry.Value.country.nazwa;
     }
     
+    public static bool IsInitialized
+    {
+        get => m_entries != null;
+    }
+    
     public static void
     Init()
     {
@@ -89,5 +93,8 @@ public class Passport {
                 country = countries[i]
             };
         }
+        
+        if (m_entries.Length == 0)
+            throw new ApplicationException("No countries found");
     }
 }
