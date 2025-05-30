@@ -2,6 +2,7 @@
 
 using System; // Potrzebne dla atrybutu Serializable
 using System.Collections.Generic; //dla listy
+using Path = System.IO.Path;
 
 [Serializable] // To jest wa�ne, aby JsonHelper m�g� j� deserializowa�
 public class CountryInfo
@@ -14,10 +15,12 @@ public class CountryInfo
     public string symbolPlik;
     public string obrazekPuzzle; // To pole jest kluczowe dla puzzli
     
-    public string
-    SymbolResourceName()
+    private string
+    GetResourceName(string file, string directory)
     {
-        string ret = $"Kraje - Symbole/{symbolPlik}";
-        return ret.Substring(0, ret.LastIndexOf('.') - 1);
+        return directory + "/" + Path.GetFileNameWithoutExtension(file);
     }
+    
+    public string SymbolResourceName => GetResourceName(symbolPlik,    "Kraje - Symbole");
+    public string PuzzleResourceName => GetResourceName(obrazekPuzzle, "PuzzleImages");
 }

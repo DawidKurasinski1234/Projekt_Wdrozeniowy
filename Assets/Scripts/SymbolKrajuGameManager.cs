@@ -128,7 +128,7 @@ public class SymbolKrajuGameManager : MonoBehaviour
         // Musisz upewniæ siê, ¿e `currentCountryInfo` ma pole, np. `symbolResourceName`
         // które odpowiada nazwie pliku sprite'a w folderze Resources/Games_Data/Kraje - Symbole/
         // np. jeœli dla W³och symbol to "Pizza-Wlochy.png", to pole powinno zawieraæ "Pizza-Wlochy"
-        string resName = currentCountryInfo.SymbolResourceName();
+        string resName = currentCountryInfo.SymbolResourceName;
         correctSymbol = LoadSpriteByResourceName(resName); // ZMIEÑ "symbolSpriteName" na faktyczne pole w CountryInfo
 
         if (correctSymbol == null)
