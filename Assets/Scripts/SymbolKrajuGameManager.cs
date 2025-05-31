@@ -12,7 +12,7 @@ public class SymbolKrajuGameManager : MonoBehaviour
     public SymbolButton[] symbolButtons;
 
     // Œcie¿ka w folderze Resources do katalogu z symbolami krajów
-    public string symbolsResourcePath = "Games_Data/Kraje - Symbole/"; // Np. "Games_Data/Kraje - Symbole/"
+    public string symbolsResourcePath = "Kraje - Symbole/"; // Np. "Games_Data/Kraje - Symbole/"
 
     private Sprite correctSymbol;
     private string currentCountryName; // Nazwa kraju z Passport.CountryInfo
@@ -29,7 +29,7 @@ public class SymbolKrajuGameManager : MonoBehaviour
     {
         Passport.Init(); // Inicjalizuj system Paszportu
 
-        if (Passport.m_entries == null || Passport.m_entries.Length == 0) // Zak³adaj¹c, ¿e m_entries jest publiczne lub mamy dostêp do jego d³ugoœci
+        if (Passport.GetEntriesCount() == 0)
         {
             Debug.LogError("Dane krajów w Paszporcie nie zosta³y za³adowane! SprawdŸ Passport.Init() i plik JSON 'countries'.");
             feedbackText.text = "B³¹d: Brak danych o krajach.";
@@ -127,11 +127,11 @@ public class SymbolKrajuGameManager : MonoBehaviour
         // Musisz upewniæ siê, ¿e `currentCountryInfo` ma pole, np. `symbolResourceName`
         // które odpowiada nazwie pliku sprite'a w folderze Resources/Games_Data/Kraje - Symbole/
         // np. jeœli dla W³och symbol to "Pizza-Wlochy.png", to pole powinno zawieraæ "Pizza-Wlochy"
-        correctSymbol = LoadSpriteByResourceName(currentCountryInfo.symbolSpriteName); // ZMIEÑ "symbolSpriteName" na faktyczne pole w CountryInfo
+        correctSymbol = LoadSpriteByResourceName(currentCountryInfo.symbolPlik);
 
         if (correctSymbol == null)
         {
-            Debug.LogError($"Nie uda³o siê za³adowaæ poprawnego symbolu dla kraju: {currentCountryName} (nazwa zasobu: {currentCountryInfo.symbolSpriteName}). SprawdŸ œcie¿kê i nazwê pliku w Resources oraz w danych JSON.");
+            Debug.LogError($"Nie uda³o siê za³adowaæ poprawnego symbolu dla kraju: {currentCountryName} (nazwa zasobu: {currentCountryInfo.symbolPlik}). SprawdŸ œcie¿kê i nazwê pliku w Resources oraz w danych JSON.");
             LoadNextSymbolQuestion(); // Spróbuj za³adowaæ nastêpny
             return;
         }

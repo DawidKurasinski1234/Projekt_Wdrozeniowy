@@ -14,6 +14,18 @@ public class Passport {
     private static Entry[] m_entries;
     private static int     m_visited;
 
+
+    //dodane na potrzeby innych skryptów
+    public static int GetEntriesCount()
+    {
+        if (m_entries == null)
+        {
+            return 0;
+        }
+        return m_entries.Length;
+    }
+    //
+
     public static CountryInfo CurrentSelectedCountry { get; internal set; }
 
     private static int
