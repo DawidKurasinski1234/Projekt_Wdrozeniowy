@@ -264,6 +264,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 93419339503811655, guid: 580e2dfe7d967e149bf7da2c3a6e13d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1506512001392234847, guid: 93795181ce29a614bad2dad32e31be28, type: 3}
     - target: {fileID: 1063722417280824674, guid: 580e2dfe7d967e149bf7da2c3a6e13d9, type: 3}
       propertyPath: m_Name
       value: UI LVL Scheme
@@ -440,6 +444,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 820
       objectReference: {fileID: 0}
+    - target: {fileID: 1707951530949668605, guid: 580e2dfe7d967e149bf7da2c3a6e13d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8435151228427288224, guid: 14e00d35c7e9a6143adda6aafe18862f, type: 3}
     - target: {fileID: 2305166891550623352, guid: 580e2dfe7d967e149bf7da2c3a6e13d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -568,6 +576,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 970
       objectReference: {fileID: 0}
+    - target: {fileID: 7498152343431936248, guid: 580e2dfe7d967e149bf7da2c3a6e13d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5757750083339748195, guid: 55973367312d8214ead7f490ceaa9cda, type: 3}
     - target: {fileID: 7956847635252479312, guid: 580e2dfe7d967e149bf7da2c3a6e13d9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5

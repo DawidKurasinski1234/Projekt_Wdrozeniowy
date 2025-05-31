@@ -12,7 +12,7 @@ public class SymbolKrajuGameManager : MonoBehaviour
     public SymbolButton[] symbolButtons;
 
     // Ścieżka w folderze Resources do katalogu z symbolami krajów
-    public string symbolsResourcePath = "Kraje - Symbole/"; // Np. "Games_Data/Kraje - Symbole/"
+    public string symbolsResourcePath = "Resources/Kraje - Symbole/"; // POPRAWIONA ŚCIEŻKA
 
     private Sprite correctSymbol;
     private string currentCountryName; // Nazwa kraju z Passport.CountryInfo

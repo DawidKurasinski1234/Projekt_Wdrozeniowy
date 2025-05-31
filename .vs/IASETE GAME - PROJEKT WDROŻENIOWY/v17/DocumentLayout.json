@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|c:\\projekt wdro\u017Ceniowy\\iasete game - projekt wdro\u017Ceniowy\\assets\\scripts\\symbolkrajugamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\symbolkrajugamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|c:\\projekt wdro\u017Ceniowy\\iasete game - projekt wdro\u017Ceniowy\\assets\\scripts\\symbolkrajubutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\symbolkrajubutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|c:\\projekt wdro\u017Ceniowy\\iasete game - projekt wdro\u017Ceniowy\\assets\\scripts\\puzzlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puzzlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,8 +59,8 @@
       "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\exitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\assets\\games_data\\kraje - miasta\\brazylia.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{086109B8-420D-9121-B22C-EC25BE75D187}|Assembly-CSharp.csproj|solutionrelative:assets\\games_data\\kraje - miasta\\brazylia.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Games_Data\\Kraje - miasta\\Brazylia.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Games_Data\\Kraje - miasta\\Brazylia.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,24 +70,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SymbolKrajuButton.cs",
+              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\SymbolKrajuButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SymbolKrajuButton.cs",
+              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\SymbolKrajuButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SymbolKrajuButton.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T11:42:37.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SymbolKrajuGameManager.cs",
+              "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\SymbolKrajuGameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SymbolKrajuGameManager.cs",
+              "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\SymbolKrajuGameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SymbolKrajuGameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T11:31:06.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PuzzleManager.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\PuzzleManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PuzzleManager.cs",
               "ToolTip": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\PuzzleManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\PuzzleManager.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAkwEIAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAkwEIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T19:46:22.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Greeting.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\Greeting.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Greeting.cs",
@@ -91,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PuzzleLoader.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\PuzzleLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PuzzleLoader.cs",
@@ -99,12 +133,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PuzzleLoader.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAQwEUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T19:34:40.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T19:34:40.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Passport.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\Passport.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Passport.cs",
@@ -116,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "HomeReturn.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\HomeReturn.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HomeReturn.cs",
@@ -128,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "GameInitializer.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\GameInitializer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameInitializer.cs",
@@ -140,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Brazylia.txt",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Games_Data\\Kraje - miasta\\Brazylia.txt",
               "RelativeDocumentMoniker": "Assets\\Games_Data\\Kraje - miasta\\Brazylia.txt",
@@ -152,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "EndGame_Show_Congrats.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\EndGame_Show_Congrats.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EndGame_Show_Congrats.cs",
@@ -164,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Skip_lvl.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\Skip_lvl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Skip_lvl.cs",
@@ -176,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
@@ -188,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "PauseMenu.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PauseMenu.cs",
@@ -200,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Minigame1Start.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\Minigame1Start.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Minigame1Start.cs",
@@ -212,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ExitGame.cs",
               "DocumentMoniker": "C:\\Projekt Wdro\u017Ceniowy\\IASETE GAME - PROJEKT WDRO\u017BENIOWY\\Assets\\Scripts\\ExitGame.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ExitGame.cs",
