@@ -1,9 +1,10 @@
-// Nazwa pliku: CountryInfo.cs (jeœli tworzysz osobny plik)
+// Nazwa pliku: CountryInfo.cs (jeï¿½li tworzysz osobny plik)
 
 using System; // Potrzebne dla atrybutu Serializable
 using System.Collections.Generic; //dla listy
+using Path = System.IO.Path;
 
-[Serializable] // To jest wa¿ne, aby JsonHelper móg³ j¹ deserializowaæ
+[Serializable] // To jest waï¿½ne, aby JsonHelper mï¿½gï¿½ jï¿½ deserializowaï¿½
 public class CountryInfo
 {
     public string nazwa;
@@ -13,4 +14,13 @@ public class CountryInfo
     public string symbol;
     public string symbolPlik;
     public string obrazekPuzzle; // To pole jest kluczowe dla puzzli
+    
+    private string
+    GetResourceName(string file, string directory)
+    {
+        return directory + "/" + Path.GetFileNameWithoutExtension(file);
+    }
+    
+    public string SymbolResourceName => GetResourceName(symbolPlik,    "Kraje - Symbole");
+    public string PuzzleResourceName => GetResourceName(obrazekPuzzle, "PuzzleImages");
 }

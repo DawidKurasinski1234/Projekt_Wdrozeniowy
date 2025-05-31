@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Potrzebne dla Image
-using System.IO; // Potrzebne dla Path.GetFileNameWithoutExtension
-using TMPro; // Dodane, jeœli u¿ywasz TextMeshPro dla puzzleText
+using TMPro;
+using Random = System.Random; // Dodane, jeœli u¿ywasz TextMeshPro dla puzzleText
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -91,11 +91,8 @@ public class PuzzleManager : MonoBehaviour
         }
 
         // U¿ywamy nazwy pliku z currentCountryInfo.obrazekPuzzle
-        string imagePathWithoutExtension = Path.GetFileNameWithoutExtension(currentCountryInfo.obrazekPuzzle);
-        string fullPathInResources = "Puzzle - zdjêcia/" + imagePathWithoutExtension;
-
+        string fullPathInResources = currentCountryInfo.PuzzleResourceName;
         jigsawTexture = Resources.Load<Texture2D>(fullPathInResources);
-
         if (jigsawTexture == null)
         {
             Debug.LogError($"PuzzleManager: NIE ZNALEZIONO obrazka puzzli: '{fullPathInResources}'. " +
@@ -143,7 +140,7 @@ public class PuzzleManager : MonoBehaviour
         CreateJigsawPieces(jigsawTexture);
 
         // Dodaj tutaj logikê rozrzucania/mieszania kawa³ków puzzli, jeœli jeszcze jej nie masz
-        // ShufflePieces(); 
+        ShufflePieces(); 
     }
 
     void CreateJigsawPieces(Texture2D jigsawTexture)
@@ -226,6 +223,43 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    // Mo¿esz dodaæ tutaj metodê do mieszania kawa³ków, np.
-    // void ShufflePieces() { ... }
+    private void 
+    ShufflePieces()
+    {
+        Vector3 center = pieces[0].position;
+        Vector3 scale  = pieces[0].localScale;
+        Vector2 total  = new Vector2(dimensions.x * scale.x, dimensions.y * scale.y);
+        var topCorner  = new Vector2(center.x - total.x / 2 + scale.x / 2, center.y - total.y / 2 + scale.y / 2);
+        
+        // Shuffle pieces
+        int index;
+        var rng = new Random();
+        var newPieces = new Transform[pieces.Count];
+        foreach (var piece in pieces) {
+            for (;;) {
+                index = rng.Next(0, newPieces.Length);
+                if (newPieces[index] == null) {
+                    newPieces[index] = piece;
+                    break;
+                }
+            }
+        }
+        
+        // Place pieces on a grid
+        index = 0;
+        for (float x = topCorner.x; x < topCorner.x + total.x; x += scale.x) {
+            for (float y = topCorner.y; y < topCorner.y + total.y; y += scale.y) {
+                newPieces[index].position = new Vector3(x, y, 0f);
+                index += 1;
+            }
+        }
+        pieces = new List<Transform>(newPieces);
+    }
+    
+    public void
+    OnPieceSelected(int x, int y)
+    {
+        // TODO: Dokoñczyc klikanie i zamianê puzzli
+        Debug.Log($"Pressed {x}, {y}");
+    }
 }
