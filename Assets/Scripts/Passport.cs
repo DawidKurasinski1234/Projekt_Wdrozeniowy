@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
@@ -6,14 +6,27 @@ using Random = System.Random;
 public class Passport {
     private struct Entry {
         public bool        visited;
-        public CountryInfo country;   
+        public CountryInfo country;    
     }
     
-    public static int      Points;
-    public static string   CurrentCountry;
+    public static int       Points;
+    public static string    CurrentCountry;
     
     private static Entry[] m_entries;
-    private static int     m_visited;
+    private static int      m_visited;
+
+    //dodane na potrzeby innych skryptów
+    public static int GetEntriesCount()
+    {
+        if (m_entries == null)
+        {
+            return 0;
+        }
+        return m_entries.Length;
+    }
+    //
+
+    public static CountryInfo CurrentSelectedCountry { get; internal set; }
 
     private static int
     GetEntryIndex(string countryName)
@@ -54,9 +67,9 @@ public class Passport {
             return m_entries[idx].country;
         return null;
     }
-  
+    
     public static string
-    ChooseCountry() 
+    ChooseCountry()    
     {
         if (m_visited == m_entries.Length)
             return null;

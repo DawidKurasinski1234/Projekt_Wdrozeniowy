@@ -11,12 +11,12 @@ public class SymbolKrajuGameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public SymbolButton[] symbolButtons;
 
-    // Œcie¿ka w folderze Resources do katalogu z symbolami krajów
-    public string symbolsResourcePath = "Games_Data/Kraje - Symbole/"; // Np. "Games_Data/Kraje - Symbole/"
+    // ÅšcieÅ¼ka w folderze Resources do katalogu z symbolami krajÃ³w
+    public string symbolsResourcePath = "Kraje - Symbole/"; // Np. "Games_Data/Kraje - Symbole/"
 
     private Sprite correctSymbol;
     private string currentCountryName; // Nazwa kraju z Passport.CountryInfo
-    private CountryInfo currentCountryInfo; // Pe³ne informacje o bie¿¹cym kraju
+    private CountryInfo currentCountryInfo; // PeÅ‚ne informacje o bieÅ¼Ä…cym kraju
 
     private int attempts;
     private int maxAttempts = 5;
@@ -29,10 +29,11 @@ public class SymbolKrajuGameManager : MonoBehaviour
     {
         Passport.Init(); // Inicjalizuj system Paszportu
 
-        if (!Passport.IsInitialized) // Zak³adaj¹c, ¿e m_entries jest publiczne lub mamy dostêp do jego d³ugoœci
+        // ROZWIÄ„ZANY KONFLIKT 1
+        if (Passport.GetEntriesCount() == 0)
         {
-            Debug.LogError("Dane krajów w Paszporcie nie zosta³y za³adowane! SprawdŸ Passport.Init() i plik JSON 'countries'.");
-            feedbackText.text = "B³¹d: Brak danych o krajach.";
+            Debug.LogError("Dane krajÃ³w w Paszporcie nie zostaÅ‚y zaÅ‚adowane! SprawdÅº Passport.Init() i plik JSON 'countries'.");
+            feedbackText.text = "BÅ‚Ä…d: Brak danych o krajach.";
             questionText.text = "";
             if (scoreText != null) scoreText.text = "Punkty: 0";
             foreach (SymbolButton button in symbolButtons) button.gameObject.SetActive(false);
@@ -41,47 +42,47 @@ public class SymbolKrajuGameManager : MonoBehaviour
 
         // Zbierz wszystkie unikalne symbole z danych Paszportu
         allUniqueSymbolsInGame = new List<Sprite>();
-        // Potrzebujemy dostêpu do wszystkich CountryInfo z Passport.m_entries
-        // Jeœli m_entries jest prywatne, Passport musi udostêpniæ metodê do pobrania wszystkich CountryInfo
-        // Na razie zak³adam, ¿e mo¿emy iterowaæ po `Passport.GetAllCountryInfos()` (musia³byœ dodaæ tak¹ metodê do Passport)
-        // LUB jeœli Passport.m_entries jest `internal` lub `public` (co nie jest idealne dla `m_entries`):
+        // Potrzebujemy dostÄ™pu do wszystkich CountryInfo z Passport.m_entries
+        // JeÅ›li m_entries jest prywatne, Passport musi udostÄ™pniÄ‡ metodÄ™ do pobrania wszystkich CountryInfo
+        // Na razie zakÅ‚adam, Å¼e moÅ¼emy iterowaÄ‡ po `Passport.GetAllCountryInfos()` (musiaÅ‚byÅ› dodaÄ‡ takÄ… metodÄ™ do Passport)
+        // LUB jeÅ›li Passport.m_entries jest `internal` lub `public` (co nie jest idealne dla `m_entries`):
         /*
-        foreach (var entry in Passport.m_entries) // To wymaga, aby m_entries by³o dostêpne
+        foreach (var entry in Passport.m_entries) // To wymaga, aby m_entries byÅ‚o dostÄ™pne
         {
-            Sprite symbol = LoadSpriteByResourceName(entry.country.symbolSpriteName); // Zak³adamy, ¿e CountryInfo ma pole symbolSpriteName
+            Sprite symbol = LoadSpriteByResourceName(entry.country.symbolSpriteName); // ZakÅ‚adamy, Å¼e CountryInfo ma pole symbolSpriteName
             if (symbol != null && !allUniqueSymbolsInGame.Contains(symbol))
             {
                 allUniqueSymbolsInGame.Add(symbol);
             }
         }
         */
-        // Bezpieczniejsza alternatywa: Passport powinien mieæ metodê zwracaj¹c¹ wszystkie nazwy zasobów symboli
-        // Na potrzeby przyk³adu, jeœli nie mo¿esz zmieniæ Passport, a `countrySymbolDatabase` by³o u¿ywane wczeœniej
-        // do trzymania Sprite'ów, mo¿esz tymczasowo za³adowaæ wszystkie Sprite'y z podanej œcie¿ki
-        // To jednak mniej eleganckie ni¿ pobieranie ich na podstawie danych z Passport.
-        // Poni¿ej uproszczone ³adowanie WSZYSTKICH sprite'ów z folderu - jeœli nie masz innej metody:
+        // Bezpieczniejsza alternatywa: Passport powinien mieÄ‡ metodÄ™ zwracajÄ…cÄ… wszystkie nazwy zasobÃ³w symboli
+        // Na potrzeby przykÅ‚adu, jeÅ›li nie moÅ¼esz zmieniÄ‡ Passport, a `countrySymbolDatabase` byÅ‚o uÅ¼ywane wczeÅ›niej
+        // do trzymania Sprite'Ã³w, moÅ¼esz tymczasowo zaÅ‚adowaÄ‡ wszystkie Sprite'y z podanej Å›cieÅ¼ki
+        // To jednak mniej eleganckie niÅ¼ pobieranie ich na podstawie danych z Passport.
+        // PoniÅ¼ej uproszczone Å‚adowanie WSZYSTKICH sprite'Ã³w z folderu - jeÅ›li nie masz innej metody:
         var loadedSprites = Resources.LoadAll<Sprite>(symbolsResourcePath.TrimEnd('/'));
         allUniqueSymbolsInGame = loadedSprites.Distinct().ToList();
 
 
         if (allUniqueSymbolsInGame.Count == 0)
         {
-            Debug.LogError($"Nie za³adowano ¿adnych symboli z Resources/{symbolsResourcePath}. SprawdŸ œcie¿kê i czy obrazki s¹ typu Sprite.");
+            Debug.LogError($"Nie zaÅ‚adowano Å¼adnych symboli z Resources/{symbolsResourcePath}. SprawdÅº Å›cieÅ¼kÄ™ i czy obrazki sÄ… typu Sprite.");
         }
         else if (allUniqueSymbolsInGame.Count < symbolButtons.Length)
         {
-            Debug.LogWarning("Uwaga: Liczba unikalnych symboli w grze jest mniejsza ni¿ liczba przycisków opcji.");
+            Debug.LogWarning("Uwaga: Liczba unikalnych symboli w grze jest mniejsza niÅ¼ liczba przyciskÃ³w opcji.");
         }
 
-        UpdateScoreDisplay(); // Wyœwietl pocz¹tkowe punkty z Paszportu
+        UpdateScoreDisplay(); // WyÅ›wietl poczÄ…tkowe punkty z Paszportu
         LoadNextSymbolQuestion();
     }
 
-    // Helper do ³adowania Sprite na podstawie nazwy (zak³adaj¹c, ¿e CountryInfo ma pole symbolSpriteName)
+    // Helper do Å‚adowania Sprite na podstawie nazwy (zakÅ‚adajÄ…c, Å¼e CountryInfo ma pole symbolSpriteName)
     Sprite LoadSpriteByResourceName(string spriteName)
     {
         if (string.IsNullOrEmpty(spriteName)) return null;
-        // Pe³na œcie¿ka np. "Games_Data/Kraje - Symbole/flamenco-Hiszpania"
+        // PeÅ‚na Å›cieÅ¼ka np. "Games_Data/Kraje - Symbole/flamenco-Hiszpania"
         return Resources.Load<Sprite>(symbolsResourcePath + spriteName);
     }
 
@@ -90,17 +91,17 @@ public class SymbolKrajuGameManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = $"Punkty: {Passport.Points}"; // U¿yj Passport.Points
+            scoreText.text = $"Punkty: {Passport.Points}"; // UÅ¼yj Passport.Points
         }
     }
 
     public void LoadNextSymbolQuestion()
     {
-        string chosenCountryNameFromPassport = Passport.ChooseCountry(); // Wybierz kraj u¿ywaj¹c Paszportu
+        string chosenCountryNameFromPassport = Passport.ChooseCountry(); // Wybierz kraj uÅ¼ywajÄ…c Paszportu
 
         if (string.IsNullOrEmpty(chosenCountryNameFromPassport))
         {
-            feedbackText.text = "Gratulacje! Odwiedzi³eœ wszystkie kraje!";
+            feedbackText.text = "Gratulacje! OdwiedziÅ‚eÅ› wszystkie kraje!";
             questionText.text = "Koniec Gry!";
             foreach (SymbolButton button in symbolButtons)
             {
@@ -112,29 +113,29 @@ public class SymbolKrajuGameManager : MonoBehaviour
         currentCountryInfo = Passport.GetCountry(chosenCountryNameFromPassport);
         if (currentCountryInfo == null)
         {
-            Debug.LogError($"Nie mo¿na znaleŸæ danych dla kraju: {chosenCountryNameFromPassport} w Paszporcie.");
-            LoadNextSymbolQuestion(); // Spróbuj za³adowaæ nastêpny, jeœli jest b³¹d
+            Debug.LogError($"Nie moÅ¼na znaleÅºÄ‡ danych dla kraju: {chosenCountryNameFromPassport} w Paszporcie.");
+            LoadNextSymbolQuestion(); // SprÃ³buj zaÅ‚adowaÄ‡ nastÄ™pny, jeÅ›li jest bÅ‚Ä…d
             return;
         }
 
-        Passport.CurrentCountry = currentCountryInfo.nazwa; // Ustaw bie¿¹cy kraj w Paszporcie
-        // NOTE:surusek - i tak tego nie u¿ywasz, to po co to
-        // Passport.CurrentSelectedCountry = currentCountryInfo; // Ustaw bie¿¹cy obiekt CountryInfo w Paszporcie
+        Passport.CurrentCountry = currentCountryInfo.nazwa; // Ustaw bieÅ¼Ä…cy kraj w Paszporcie
+        // NOTE:surusek - i tak tego nie uÅ¼ywasz, to po co to
+        // Passport.CurrentSelectedCountry = currentCountryInfo; // Ustaw bieÅ¼Ä…cy obiekt CountryInfo w Paszporcie
 
         currentCountryName = currentCountryInfo.nazwa;
-        // Zak³adamy, ¿e CountryInfo ma pole np. `symbolSpriteName` lub podobne, które jest nazw¹ pliku Sprite
-        // Jeœli `CountryInfo` przechowuje bezpoœrednio Sprite, to super, ale z JSON to trudniejsze.
-        // Tutaj u¿yjemy metody pomocniczej LoadSpriteByResourceName.
-        // Musisz upewniæ siê, ¿e `currentCountryInfo` ma pole, np. `symbolResourceName`
-        // które odpowiada nazwie pliku sprite'a w folderze Resources/Games_Data/Kraje - Symbole/
-        // np. jeœli dla W³och symbol to "Pizza-Wlochy.png", to pole powinno zawieraæ "Pizza-Wlochy"
-        string resName = currentCountryInfo.SymbolResourceName;
-        correctSymbol = LoadSpriteByResourceName(resName); // ZMIEÑ "symbolSpriteName" na faktyczne pole w CountryInfo
+        // ZakÅ‚adamy, Å¼e CountryInfo ma pole np. `symbolSpriteName` lub podobne, ktÃ³re jest nazwÄ… pliku Sprite
+        // JeÅ›li `CountryInfo` przechowuje bezpoÅ›rednio Sprite, to super, ale z JSON to trudniejsze.
+        // Tutaj uÅ¼yjemy metody pomocniczej LoadSpriteByResourceName.
+        // Musisz upewniÄ‡ siÄ™, Å¼e `currentCountryInfo` ma pole, np. `symbolResourceName`
+        // ktÃ³re odpowiada nazwie pliku sprite'a w folderze Resources/Games_Data/Kraje - Symbole/
+        // np. jeÅ›li dla WÅ‚och symbol to "Pizza-Wlochy.png", to pole powinno zawieraÄ‡ "Pizza-Wlochy"
+        // ROZWIÄ„ZANY KONFLIKT 2
+        correctSymbol = LoadSpriteByResourceName(currentCountryInfo.symbolPlik);
 
         if (correctSymbol == null)
         {
-            Debug.LogError($"Nie uda³o siê za³adowaæ poprawnego symbolu dla kraju: {currentCountryName} (nazwa zasobu: {resName}). SprawdŸ œcie¿kê i nazwê pliku w Resources oraz w danych JSON.");
-            LoadNextSymbolQuestion(); // Spróbuj za³adowaæ nastêpny
+            Debug.LogError($"Nie udaÅ‚o siÄ™ zaÅ‚adowaÄ‡ poprawnego symbolu dla kraju: {currentCountryName} (nazwa zasobu: {currentCountryInfo.symbolPlik}). SprawdÅº Å›cieÅ¼kÄ™ i nazwÄ™ pliku w Resources oraz w danych JSON.");
+            LoadNextSymbolQuestion(); // SprÃ³buj zaÅ‚adowaÄ‡ nastÄ™pny
             return;
         }
 
@@ -193,7 +194,7 @@ public class SymbolKrajuGameManager : MonoBehaviour
         if (correctAnswer)
         {
             feedbackText.text = "Brawo! To poprawny symbol!";
-            Passport.Points += currentPointsForThisQuestion; // U¿yj Passport.Points
+            Passport.Points += currentPointsForThisQuestion; // UÅ¼yj Passport.Points
             UpdateScoreDisplay();
         }
         else
@@ -203,15 +204,15 @@ public class SymbolKrajuGameManager : MonoBehaviour
 
             if (attempts >= maxAttempts)
             {
-                feedbackText.text = $"Koniec prób! Poprawnym symbolem dla {currentCountryName} by³ ten w³aœciwy.";
+                feedbackText.text = $"Koniec prÃ³b! Poprawnym symbolem dla {currentCountryName} byÅ‚ ten wÅ‚aÅ›ciwy.";
             }
             else
             {
-                feedbackText.text = $"Niestety, to nie ten symbol. Pozosta³o prób: {maxAttempts - attempts}. Tracisz 1 punkt.";
+                feedbackText.text = $"Niestety, to nie ten symbol. PozostaÅ‚o prÃ³b: {maxAttempts - attempts}. Tracisz 1 punkt.";
             }
         }
 
-        // Kraj jest "odwiedzony" po zakoñczeniu prób lub po poprawnej odpowiedzi.
+        // Kraj jest "odwiedzony" po zakoÅ„czeniu prÃ³b lub po poprawnej odpowiedzi.
         if (correctAnswer || attempts >= maxAttempts)
         {
             Passport.VisitCountry(currentCountryName);
