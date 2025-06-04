@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pomnik_Chrystusa_0: 3469262710839260369
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

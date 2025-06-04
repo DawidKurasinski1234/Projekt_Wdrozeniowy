@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spain-map_0: 4007175160667556690
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

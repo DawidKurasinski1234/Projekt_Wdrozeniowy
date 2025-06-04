@@ -17,10 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/passport_menu.unity
     guid: e904a09743a052d4cbb642fccceb8bc9
-  - enabled: 1
-    path: Assets/Scenes/minigame4_menu.unity
-    guid: 59aa1f986c0e68e4991af09c519fd0ae
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/minigame1_menu.unity
     guid: 42142911a49b3ab40ad182a0873913cd
   - enabled: 1
@@ -29,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/minigame3_menu.unity
     guid: 9d2f3703a86b8a04eb9dbfde69d38f47
+  - enabled: 1
+    path: Assets/Scenes/minigame4_menu.unity
+    guid: 59aa1f986c0e68e4991af09c519fd0ae
   - enabled: 1
     path: Assets/Scenes/minigame5_menu.unity
     guid: 766e3aa54642bcf4cb6ea171633c30b1

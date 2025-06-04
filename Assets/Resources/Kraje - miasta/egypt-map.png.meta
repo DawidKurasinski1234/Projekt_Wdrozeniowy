@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      egypt-map_0: -528653221060098813
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

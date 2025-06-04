@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      japan-map_0: -5466858030253252809
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
