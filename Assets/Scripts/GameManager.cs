@@ -1,7 +1,8 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,22 +16,49 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        StartCapitalQuiz("W�ochy", "Rzym", new List<string> { "Mediolan", "Neapol", "Florencja", "Turyn" });
+        Passport.Init();
+
+        string countryName = Passport.CurrentCountry;
+        if (countryName != null)
+        {
+            CountryInfo info = Passport.GetCountry(countryName);
+            if (info != null)
+            {
+                Passport.VisitCountry(countryName);
+                StartCapitalQuiz(info);
+            }
+            else
+            {
+                Debug.LogError("Nie znaleziono danych kraju: " + countryName);
+            }
+        }
+        else
+        {
+            questionText.text = "Wszystkie kraje odwiedzone!";
+        }
     }
 
-    public void StartCapitalQuiz(string country, string capital, List<string> others)
+    public void StartCapitalQuiz(CountryInfo country)
     {
-        questionText.text = $"Wska� stolic�: {country}";
-        correctCapital = capital;
+        questionText.text = $"Wska¿ stolicê: {country.nazwa}";
+        correctCapital = country.stolica;
         attempts = 0;
 
-        List<string> allCities = new List<string>(others);
-        allCities.Add(capital);
-        allCities.Sort((a, b) => Random.value.CompareTo(0.5f)); // shuffle
+        // Skopiuj inne miasta i upewnij siê, ¿e nie zawieraj¹ stolicy
+        List<string> allCities = new List<string>(country.miasta);
+        allCities.Remove(country.stolica); // na wszelki wypadek
 
+        // Dodaj stolicê do listy i przetasuj
+        allCities.Add(country.stolica);
+        ShuffleList(allCities);
+
+        // Przypisz do przycisków
         for (int i = 0; i < cityButtons.Length; i++)
         {
-            cityButtons[i].Initialize(allCities[i], this);
+            if (i < allCities.Count)
+                cityButtons[i].Initialize(allCities[i], this);
+            else
+                cityButtons[i].gameObject.SetActive(false); // ukryj nadmiarowe przyciski
         }
 
         feedbackText.text = "";
@@ -40,18 +68,31 @@ public class GameManager : MonoBehaviour
     {
         if (chosen == correctCapital)
         {
-            feedbackText.text = "Brawo! To poprawna odpowied�!";
-            // Mo�na doda� punktacj�
+            feedbackText.text = "Brawo! To poprawna odpowiedŸ!";
+            Passport.Points++;
+            // Tu mo¿na np. przejœæ do nastêpnego kraju lub ekranu
         }
         else
         {
             attempts++;
-            feedbackText.text = $"To nie stolica. Pr�ba: {attempts}/{maxAttempts}";
+            feedbackText.text = $"To nie stolica. Próba: {attempts}/{maxAttempts}";
             if (attempts >= maxAttempts)
             {
-                feedbackText.text = $"Koniec pr�b! Poprawna odpowied� to: {correctCapital}";
-                // Automatyczny skip
+                feedbackText.text = $"Koniec prób! Poprawna odpowiedŸ to: {correctCapital}";
+                // Tu te¿ mo¿na przejœæ dalej
             }
+        }
+    }
+
+    // Proste mieszanie listy (Fisher-Yates shuffle)
+    private void ShuffleList(List<string> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            int j = UnityEngine.Random.Range(i, list.Count);
+            string temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
         }
     }
 }
