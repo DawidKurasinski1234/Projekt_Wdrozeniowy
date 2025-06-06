@@ -6,7 +6,7 @@
       "miasta": ["Kioto", "Osaka", "Jokohama", "Nagoja"],
       "powitanie": "Konnichiwa",
       "symbol": "maneki-neko",
-      "symbolPlik": "manekineko-Japonia.jpg.jpg",
+      "symbolPlik": "manekineko-Japonia.jpg",
       "obrazekPuzzle": "Gora_Fuji.jpg"
     },
     {
@@ -15,7 +15,7 @@
       "miasta": ["São Paulo", "Rio de Janeiro", "Salvador", "Fortaleza"],
       "powitanie": "Olá",
       "symbol": "piłka nożna",
-      "symbolPlik": "piłka_nożna-Brazylia.jpg.jpg",
+      "symbolPlik": "piłka_nożna-Brazylia.jpg",
       "obrazekPuzzle": "Pomnik_Chrystusa.jpg"
     },
     {

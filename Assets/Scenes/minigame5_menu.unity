@@ -1396,12 +1396,12 @@ MonoBehaviour:
   feedbackText: {fileID: 735727839}
   scoreText: {fileID: 0}
   symbolButtons:
-  - {fileID: 1676971109}
+  - {fileID: 521855988}
   - {fileID: 1676971109}
   - {fileID: 441543502}
   - {fileID: 1571095799}
   - {fileID: 5471530}
-  symbolsResourcePath: Resources/Kraje - Symbole
+  symbolsResourcePath: Kraje - Symbole/
 --- !u!4 &1355097776
 Transform:
   m_ObjectHideFlags: 0
