@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/minigame2_menu_stolica.unity
     guid: 6f9fea21e3fd1a9458a1a7ba96ae1c40
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/minigame3_menu.unity
     guid: 9d2f3703a86b8a04eb9dbfde69d38f47
   - enabled: 1

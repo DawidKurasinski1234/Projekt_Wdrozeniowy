@@ -807,6 +807,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ba7fd772d58a434ebaae6668f4a7a13, type: 3}
+--- !u!1 &836429030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3384193345440862309, guid: 7ba7fd772d58a434ebaae6668f4a7a13, type: 3}
+  m_PrefabInstance: {fileID: 836429029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &851761968
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameCanvas: {fileID: 1745405167}
-  pauseMenuCanvas: {fileID: 0}
+  pauseMenuCanvas: {fileID: 836429030}
   Score: {fileID: 1500606922}
 --- !u!1 &1129693561
 GameObject:
