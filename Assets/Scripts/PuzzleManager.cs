@@ -13,8 +13,9 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private Transform gameHolder; // Rodzic dla wszystkich kawa³ków puzzli
     [SerializeField] private GameObject piecePrefab; // Prefab pojedynczego kawa³ka puzzli (powinien mieæ Quad, MeshFilter, MeshRenderer)
 
-    [Tooltip("Mno¿nik skali dla ka¿dego kawa³ka puzzli. U¿yj, aby dostosowaæ widoczny rozmiar.")]
-    [SerializeField] private float pieceScaleMultiplier = 100f; // Domyœlna wartoœæ, mo¿esz dostosowaæ w Inspektorze
+    // Zmiana tutaj: usuniêto [SerializeField] i ustawiono sta³¹ wartoœæ 270f
+    // pieceScaleMultiplier bêdzie teraz zawsze 270 i nie bêdzie edytowalne w Inspektorze
+    private const float pieceScaleMultiplier = 270f; // Sta³y rozmiar 270
 
     [Header("UI Elements")]
     [SerializeField] private Image fullPuzzleImageDisplay; // Obrazek UI wyœwietlaj¹cy ca³y obrazek przed pociêciem
@@ -96,8 +97,8 @@ public class PuzzleManager : MonoBehaviour
         if (jigsawTexture == null)
         {
             Debug.LogError($"PuzzleManager: NIE ZNALEZIONO obrazka puzzli: '{fullPathInResources}'. " +
-                           $"Upewnij siê, ¿e plik jest w 'Assets/Resources/Puzzle - zdjêcia/' " +
-                           $"i ma poprawne ustawienia ('Texture Type: Sprite (2D and UI)', 'Read/Write Enabled' zaznaczone w zaawansowanych).");
+                                $"Upewnij siê, ¿e plik jest w 'Assets/Resources/Puzzle - zdjêcia/' " +
+                                $"i ma poprawne ustawienia ('Texture Type: Sprite (2D and UI)', 'Read/Write Enabled' zaznaczone w zaawansowanych).");
         }
         else
         {
@@ -140,7 +141,7 @@ public class PuzzleManager : MonoBehaviour
         CreateJigsawPieces(jigsawTexture);
 
         // Dodaj tutaj logikê rozrzucania/mieszania kawa³ków puzzli, jeœli jeszcze jej nie masz
-        ShufflePieces(); 
+        ShufflePieces();
     }
 
     void CreateJigsawPieces(Texture2D jigsawTexture)
@@ -160,8 +161,8 @@ public class PuzzleManager : MonoBehaviour
                 float offsetY = -(dimensions.y / 2f - 0.5f) * pieceHeightWorld;
 
                 piece.localPosition = new Vector3(
-                    (col * pieceWidthWorld) + offsetX,      // Pozycja X
-                    (row * pieceHeightWorld) + offsetY,     // Pozycja Y
+                    (col * pieceWidthWorld) + offsetX,     // Pozycja X
+                    (row * pieceHeightWorld) + offsetY,    // Pozycja Y
                     -1f); // Pozycja Z (bli¿ej kamery ni¿ 0,0,0)
 
                 // Skalowanie kawa³ka - u¿ywamy pieceWidthWorld i pieceHeightWorld
@@ -223,13 +224,13 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    private void 
+    private void
     ShufflePieces()
     {
         Vector3 center = pieces[0].position;
-        Vector3 scale  = pieces[0].localScale;
-        Vector2 total  = new Vector2(dimensions.x * scale.x, dimensions.y * scale.y);
-        var topCorner  = new Vector2(center.x - total.x / 2 + scale.x / 2, center.y - total.y / 2 + scale.y / 2);
+        Vector3 scale = pieces[0].localScale;
+        Vector2 total = new Vector2(dimensions.x * scale.x, dimensions.y * scale.y);
+        var topCorner = new Vector2(center.x - total.x / 2 + scale.x / 2, center.y - total.y / 2 + scale.y / 2);
         
         // Shuffle pieces
         int index;

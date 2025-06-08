@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     public void StartCapitalQuiz(CountryInfo country)
     {
-        questionText.text = $"Wska¿ stolicê: {country.nazwa}";
+        questionText.text = $"Wskaż stolicę kraju: {country.nazwa}";
         correctCapital = country.stolica;
         attempts = 0;
 
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
     {
         if (chosen == correctCapital)
         {
-            feedbackText.text = "Brawo! To poprawna odpowiedŸ!";
+            feedbackText.text = "Brawo! To poprawna odpowiedź!";
             Passport.Points++;
             // Tu mo¿na np. przejœæ do nastêpnego kraju lub ekranu
         }
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
             feedbackText.text = $"To nie stolica. Próba: {attempts}/{maxAttempts}";
             if (attempts >= maxAttempts)
             {
-                feedbackText.text = $"Koniec prób! Poprawna odpowiedŸ to: {correctCapital}";
+                feedbackText.text = $"Koniec prób! Poprawna odpowiedź to: {correctCapital}";
                 // Tu te¿ mo¿na przejœæ dalej
             }
         }

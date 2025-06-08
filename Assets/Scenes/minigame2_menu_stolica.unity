@@ -877,6 +877,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7910366001241330164, guid: 7ba7fd772d58a434ebaae6668f4a7a13, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910366001241330164, guid: 7ba7fd772d58a434ebaae6668f4a7a13, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.16470589
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910366001241330164, guid: 7ba7fd772d58a434ebaae6668f4a7a13, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.16470589
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910366001241330164, guid: 7ba7fd772d58a434ebaae6668f4a7a13, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.16470589
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2591,6 +2607,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4782382206677494765, guid: 580e2dfe7d967e149bf7da2c3a6e13d9, type: 3}
       propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990697627807452522, guid: 580e2dfe7d967e149bf7da2c3a6e13d9, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6496001609631810017, guid: 580e2dfe7d967e149bf7da2c3a6e13d9, type: 3}
